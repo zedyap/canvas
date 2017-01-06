@@ -209,7 +209,8 @@ CREATE ALGORITHM=UNDEFINED VIEW `v_contact` AS SELECT
     numberOfSuccessfulLogins,
     numberOfForumPosts,
     contact.created,
-    organization_id
+    organization_id,
+	contact.modified
   FROM spark.contact
     LEFT JOIN spark.label ON spark.label.id = spark.contact.salutation_id ;
 
